@@ -82,3 +82,5 @@ print(f"MAE:   {mae:,.0f} ₽")
 print(f"RMSE:  {rmse:,.0f} ₽")
 print(f"MAPE:  {mape:.2f}%")
 print(f"R²:    {r2:.4f}")
+
+
