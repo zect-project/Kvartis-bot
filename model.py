@@ -5,11 +5,13 @@ from catboost import CatBoostRegressor   # сама модель
 from catboost import Pool   # оптимизация работы с категориальными признаками
 import pandas as pd   # база
 import numpy as np   # база
+import matplotlib.pyplot as plt   # визуализация
+import joblib
 
 
 #################### ПЕРЕОБРАЗОВЫВАЕМ ДАННЫЕ ####################
 
-df = pd.read_csv('data/main_data.csv')   #  подключаемся к базе
+df = pd.read_csv('E:/qpo/pytop/Kvartirs/data/main_data.csv')   # ПОМЕНЯЙТЕ НА СВОЁ !!! подключаемся к базе
 
 x = df.drop(columns=['real_price'])
 y = df.drop(columns=['city', 'rooms', 'm2', 'repair', 'floor', 'all_floor'])
@@ -83,5 +85,6 @@ print(f"RMSE:  {rmse:,.0f} ₽")
 print(f"MAPE:  {mape:.2f}%")
 print(f"R²:    {r2:.4f}")
 
-
-
+model.save_model("models/kvartis_model.cbm")
+joblib.dump(scaler, "models/kvartis_scaler.pkl")
+print("модель сохранина в папку models")
