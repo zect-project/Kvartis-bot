@@ -1,10 +1,7 @@
-# app.py (сохрани этот файл в корне проекта C:/holl/python/Kvartis/)
-# Запуск: uvicorn app:app --reload --port 8000
-# (если fastapi и uvicorn не установлены: pip install fastapi uvicorn jinja2)
-
 from fastapi import FastAPI, Form, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+
 import pandas as pd
 import numpy as np
 from catboost import CatBoostRegressor
@@ -44,13 +41,13 @@ async def predict(
     floor: int = Form(...),
     all_floor: int = Form(...)
 ):
-    # === 1. Перезаписываем wdata.csv (удаляем всё старое, пишем только новую строку без заголовка) ===
+    # ===  Перезаписываем wdata.csv (УДАЛЯЕМ старое, пишем только новую строку без заголовка) ===
     row = [city, rooms, m2, repair, floor, all_floor]
     with open(CSV_PATH, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
         writer.writerow(row)          # строго одна строка, без заголовка — как было
 
-    # === 2. ТОЧНО такой же код, как в твоём оригинальном скрипте ===
+
     df = pd.read_csv(CSV_PATH, header=None)
     df.columns = ['city', 'rooms', 'm2', 'repair', 'floor', 'all_floor']
     row = df.iloc[0]
@@ -62,11 +59,10 @@ async def predict(
     pred_log = model.predict(x)
     pred_price = np.expm1(pred_log)[0]
 
-    # === 3. Вывод в консоль (точно как было) ===
+# консоль
     print(x.to_string(index=False))
     print("цена ≈", f"{pred_price:,.0f}", "₽")
 
-    # === 4. Результат для веб-интерфейса ===
     result = f"цена ≈ {pred_price:,.0f} ₽"
 
     inputs = {
@@ -85,4 +81,5 @@ async def predict(
             "result": result,
             "inputs": inputs
         }
+
     )
