@@ -10,8 +10,8 @@ import csv
 
 # Загружаем модель и скейлер ОДИН РАЗ при старте приложения
 model = CatBoostRegressor()
-model.load_model('C:/holl/python/Kvartis/models/kvartis_model.cbm')
-scaler = joblib.load('C:/holl/python/Kvartis/models/kvartis_scaler.pkl')
+model.load_model('Kvartis/models/kvartis_model.cbm')
+scaler = joblib.load('Kvartis/models/kvartis_scaler.pkl')
 
 app = FastAPI(title="Kvartis Price Predictor")
 templates = Jinja2Templates(directory="templates")
@@ -83,3 +83,4 @@ async def predict(
         }
 
     )
+
