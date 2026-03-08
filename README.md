@@ -18,7 +18,7 @@ Markdown# Kvartis-bot 🏙️💸
 
 ## 🛠 Технологии
 
-- **Python 3**
+- **Лучше всего подходит Python 3.12**
 - **CatBoost** — основная модель
 - **FastAPI** + Jinja2 — веб-приложение
 - **Pandas, NumPy, scikit-learn** — обработка данных
