@@ -44,11 +44,6 @@ model.load_model('C:/holl/python/Kvartis/models/kvartis_model.cbm')
 scaler = joblib.load('C:/holl/python/Kvartis/models/kvartis_scaler.pkl')
 CSV_PATH = 'C:/holl/python/Kvartis/web/wdata.csv'
 
-# Стань:
-model.load_model('../models/kvartis_model.cbm')
-scaler = joblib.load('../models/kvartis_scaler.pkl')
-CSV_PATH = 'wdata.csv'
-4. Запуск веб-приложения
-Bashcd web
+Запуск веб-приложения
 uvicorn main:app --reload
 Открой в браузере: http://127.0.0.1:8000
