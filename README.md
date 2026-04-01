@@ -26,21 +26,6 @@ Markdown# Kvartis-bot 🏙️💸
 
 ---
 
-## 📁 Структура проекта
-Kvartis-bot/
-├── data/                  # данные для обучения
-│   └── main_data.csv
-├── models/                # сохранённая модель
-│   ├── kvartis_model.cbm
-│   └── kvartis_scaler.pkl
-├── web/                   # веб-приложение
-│   ├── main.py
-│   ├── templates/
-│   │   └── index.html
-│   └── wdata.csv          # временный файл для предсказания
-├── model.py               # скрипт обучения модели
-└── modyo.ipynb            # Jupyter-ноутбук (анализ)
-text---
 
 ## 🚀 Установка и запуск
 
