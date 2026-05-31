@@ -1,10 +1,10 @@
 from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error   # метрики для конечного результата
-from sklearn.model_selection import train_test_split   # разбиваем данные
+from sklearn.model_selection import train_test_split  
 from sklearn.preprocessing import StandardScaler   # нормализация масштаба признаков
-from catboost import CatBoostRegressor   # сама модель 
+from catboost import CatBoostRegressor   
 from catboost import Pool   # оптимизация работы с категориальными признаками
-import pandas as pd   # база
-import numpy as np   # база
+import pandas as pd   
+import numpy as np   
 import joblib
 
 
