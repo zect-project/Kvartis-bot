@@ -5,7 +5,6 @@ from catboost import CatBoostRegressor   # сама модель
 from catboost import Pool   # оптимизация работы с категориальными признаками
 import pandas as pd   # база
 import numpy as np   # база
-import matplotlib.pyplot as plt   # визуализация
 import joblib
 
 
