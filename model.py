@@ -10,7 +10,7 @@ import joblib
 
 #################### ПЕРЕОБРАЗОВЫВАЕМ ДАННЫЕ ####################
 
-df = pd.read_csv('Kvartirs/data/main_data.csv')   # ПОМЕНЯЙТЕ НА СВОЁ !!! подключаемся к базе
+df = pd.read_csv('Kvartis/data/main_data.csv')   # ПОМЕНЯЙТЕ НА СВОЁ !!! подключаемся к базе
 
 x = df.drop(columns=['real_price'])
 y = df.drop(columns=['city', 'rooms', 'm2', 'repair', 'floor', 'all_floor'])
