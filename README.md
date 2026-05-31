@@ -18,7 +18,7 @@
 
 ## 🛠 Технологии
 
-- **Лучше всего подходит Python 3.12**
+- **Лучшая версия python: 3.12**
 - **CatBoost** - основная модель
 - **FastAPI** + Jinja2 - веб-приложение
 - **Pandas, NumPy, scikit-learn** - обработка данных
@@ -37,13 +37,7 @@ cd Kvartis-bot
 2. Зависимости
 pip install fastapi uvicorn catboost pandas numpy joblib scikit-learn jinja2
 
-3. Исправление путей (обязательно!)
-В файле web/main.py замени жёстко заданные пути на относительные:
-Python# Было:
-model.load_model('C:/holl/python/Kvartis/models/kvartis_model.cbm')
-scaler = joblib.load('C:/holl/python/Kvartis/models/kvartis_scaler.pkl')
-CSV_PATH = 'C:/holl/python/Kvartis/web/wdata.csv'
-
+3. 
 Запуск веб-приложения
 uvicorn main:app --reload
 Открой в браузере: http://127.0.0.1:8000
