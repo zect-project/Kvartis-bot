@@ -46,13 +46,13 @@ test_pool = Pool(
 )
 
 
-###################### ГЛАВНАЯ ЧАСТЬ ######################
+###################### ОСНОВНАЯ ЧАСТЬ ######################
 
 
 from catboost import CatBoostRegressor
 from sklearn.metrics import mean_absolute_error, r2_score, mean_squared_error
 
-model = CatBoostRegressor(   # сама модель
+model = CatBoostRegressor(   
     iterations=4000,
     learning_rate=0.25,
     depth=8,
