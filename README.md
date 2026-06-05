@@ -1,6 +1,6 @@
  # Kvartis-bot 
  
-### [English]([https://github.com/zect-project/Kvartis-bot/blob/main/README_ENGLISH.md]) | [Русский](https://github.com/amnezia-vpn/amnezia-client/blob/dev/README.md)
+### [English]([https://github.com/zect-project/Kvartis-bot/blob/main/README_ENGLISH.md]) | [Русский](https://github.com/zect-project/Kvartis-bot/edit/main/README.md)
 
 **ИИ-бот для точной оценки рыночной стоимости квартир**  
 Модель на **CatBoostRegressor**, обученная на реальных данных о недвижимости.  
