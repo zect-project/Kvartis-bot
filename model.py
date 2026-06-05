@@ -15,7 +15,7 @@ df = pd.read_csv('Kvartis/data/main_data.csv')   # ПОМЕНЯЙТЕ НА СВ�
 x = df.drop(columns=['real_price'])
 y = df.drop(columns=['city', 'rooms', 'm2', 'repair', 'floor', 'all_floor'])
 
-x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.05, random_state=42)   # разбиваем данные
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.1, random_state=42)   # разбиваем данные
 
 
 features = ['rooms', 'm2', 'floor', 'all_floor']   # убераем city и repair
