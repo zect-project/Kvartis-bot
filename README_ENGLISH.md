@@ -3,7 +3,6 @@
 ### [English]([https://github.com/zect-project/Kvartis-bot/blob/main/README_ENGLISH.md]) | [Русский](https://github.com/zect-project/Kvartis-bot/blob/main/README.md)
 
 **AI Bot for Accurate Apartment Market Value Estimation**
-
 A **CatBoostRegressor** model trained on real estate data.  
 Quickly and accurately predicts apartment prices based on key parameters: city, number of rooms, area, renovation quality, floor, and building floor count.
 
