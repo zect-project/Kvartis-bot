@@ -29,10 +29,12 @@
 
 ##  Установка и запуск
 
-```bash
+
 ### 1. Клонирование
+```bash
 git clone https://github.com/zect-project/Kvartis-bot.git
 cd Kvartis-bot
+```
 
 2. Зависимости
 pip install fastapi uvicorn catboost pandas numpy joblib scikit-learn jinja2
