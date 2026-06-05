@@ -8,7 +8,7 @@ from catboost import CatBoostRegressor
 import joblib
 import csv
 
-# Загружаем модель и скейлер ОДИН РАЗ при старте приложения
+# ===  Загружаем модель и скейлер  ===
 model = CatBoostRegressor()
 model.load_model('Kvartis/models/kvartis_model.cbm')
 scaler = joblib.load('Kvartis/models/kvartis_scaler.pkl')
