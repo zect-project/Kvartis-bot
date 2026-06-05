@@ -37,4 +37,5 @@ cd Kvartis-bot
 pip install fastapi uvicorn catboost pandas numpy joblib scikit-learn jinja2
 ### 3. Run the web application
 uvicorn main:app --reload
+
 Open in your browser: http://127.0.0.1:8000
