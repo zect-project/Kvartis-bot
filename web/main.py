@@ -16,7 +16,7 @@ scaler = joblib.load('Kvartis/models/kvartis_scaler.pkl')
 app = FastAPI(title="Kvartis Price Predictor")
 templates = Jinja2Templates(directory="templates")
 
-CSV_PATH = 'C:/holl/python/Kvartis/web/wdata.csv'
+CSV_PATH = '/Kvartis/web/wdata.csv'
 
 
 @app.get("/", response_class=HTMLResponse)
