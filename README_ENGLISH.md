@@ -39,3 +39,7 @@ pip install fastapi uvicorn catboost pandas numpy joblib scikit-learn jinja2
 uvicorn main:app --reload
 
 Open in your browser: http://127.0.0.1:8000
+
+## Web interface
+![](https://github.com/zect-project/Kvartis-bot/blob/main/image/web_interface_1.png)
+![](https://github.com/zect-project/Kvartis-bot/blob/main/image/web_interface_2.png)
