@@ -9,15 +9,21 @@ import numpy as np
 import joblib
 import csv
 
-# ===  Загружаем модель и скейлер  ===
+# ===  НАСТРОЙКА ПУТЕЙ  ===
+BASE_DIR = Path(__file__).resolve().parent.parent  # корень проекта (Kvartis-bot)
+
+MODEL_PATH = BASE_DIR / "models" / "kvartis_model.cbm"
+SCALER_PATH = BASE_DIR / "models" / "kvartis_scaler.pkl"
+CSV_PATH = BASE_DIR / "web" / "wdata.csv"
+
+# ===  ЗАГРУЗКА МОДЕЛИ  ===
 model = CatBoostRegressor()
-model.load_model('Kvartis/models/kvartis_model.cbm')
-scaler = joblib.load('Kvartis/models/kvartis_scaler.pkl')
+model.load_model(str(MODEL_PATH))
+
+scaler = joblib.load(str(SCALER_PATH))
 
 app = FastAPI(title="Kvartis Price Predictor")
-templates = Jinja2Templates(directory="templates")
-
-CSV_PATH = 'Kvartis/web/wdata.csv'
+templates = Jinja2Templates(directory=str(BASE_DIR / "web" / "templates"))
 
 
 @app.get("/", response_class=HTMLResponse)
