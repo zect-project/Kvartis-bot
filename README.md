@@ -38,10 +38,10 @@ git clone https://github.com/zect-project/Kvartis-bot.git
 cd Kvartis-bot
 ```
 
-2. Зависимости
+### 2. Зависимости
 pip install fastapi uvicorn catboost pandas numpy joblib scikit-learn jinja2
 
-3. Запуск веб-приложения
+### 3. Запуск веб-приложения
 uvicorn main:app --reload
 
 Открой в браузере: http://127.0.0.1:8000
