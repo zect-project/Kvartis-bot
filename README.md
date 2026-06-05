@@ -45,6 +45,6 @@ uvicorn main:app --reload
 
 Открой в браузере: http://127.0.0.1:8000
 
-
-!(https://github.com/zect-project/Kvartis-bot/blob/main/image/web_interface_1.png)
-https://github.com/zect-project/Kvartis-bot/blob/main/image/web_interface_2.png
+## Веб интерфейс
+![](https://github.com/zect-project/Kvartis-bot/blob/main/image/web_interface_1.png)
+![](https://github.com/zect-project/Kvartis-bot/blob/main/image/web_interface_2.png)
