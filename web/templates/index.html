@@ -8,10 +8,21 @@
         body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; padding: 20px; background: #f9f9f9; }
         h1 { color: #333; }
         label { display: inline-block; width: 180px; margin: 10px 0 5px; font-weight: bold; }
-        /* Обновил стили для input и select, чтобы они выглядели одинаково */
         input, select { padding: 8px; width: 300px; border: 1px solid #ccc; border-radius: 4px; }
-        button { padding: 12px 30px; font-size: 16px; background: #007bff; color: white; border: none; border-radius: 4px; cursor: pointer; }
-        button:hover { background: #0056b3; }
+        
+        button { 
+            padding: 12px 30px; 
+            font-size: 16px; 
+            background: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            margin-top: 30px; 
+            display: block;   
+        }
+        
+        button:hover { background: #0974e7; }
         .result { margin-top: 30px; padding: 20px; background: #d4edda; border: 2px solid #28a745; border-radius: 8px; font-size: 24px; font-weight: bold; color: #155724; }
     </style>
 </head>
@@ -50,9 +61,5 @@
     </div>
     {% endif %}
 
-    <p style="margin-top:40px; color:#666; font-size:14px;">
-        Файл <code>wdata.csv</code> автоматически перезаписывается при каждом запросе.<br>
-        Модель и скейлер загружаются один раз при старте сервера.
-    </p>
 </body>
 </html>
