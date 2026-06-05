@@ -41,7 +41,7 @@ async def predict(
     floor: int = Form(...),
     all_floor: int = Form(...)
 ):
-    # ===  Перезаписываем wdata.csv (УДАЛЯЕМ старое, пишем только новую строку без заголовка) ===
+    # ===  Перезаписываем wdata.csv  ===
     row = [city, rooms, m2, repair, floor, all_floor]
     with open(CSV_PATH, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
