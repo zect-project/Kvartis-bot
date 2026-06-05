@@ -1,0 +1,32 @@
+# Kvartis-bot
+**AI Bot for Accurate Apartment Market Value Estimation**
+
+A **CatBoostRegressor** model trained on real estate data.  
+Quickly and accurately predicts apartment prices based on key parameters: city, number of rooms, area, renovation quality, floor, and building floor count.
+
+---
+
+## Features
+- High-precision prediction model (CatBoost + price log transformation)
+- User-friendly web interface (FastAPI + Jinja2)
+- Automatic data normalization
+- Save and load trained model
+- Simple input form for apartment parameters
+
+---
+
+## Technologies
+- **Python 3.12** (recommended)
+- **CatBoost** — main ML model
+- **FastAPI** + **Jinja2** — web application
+- **Pandas, NumPy, scikit-learn** — data processing
+- **Joblib** — scaler and model persistence
+
+---
+
+## Installation and Launch
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/zect-project/Kvartis-bot.git
+cd Kvartis-bot
