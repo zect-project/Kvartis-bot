@@ -45,7 +45,7 @@ async def predict(
     row = [city, rooms, m2, repair, floor, all_floor]
     with open(CSV_PATH, 'w', newline='', encoding='utf-8') as f:
         writer = csv.writer(f)
-        writer.writerow(row)          # строго одна строка, без заголовка — как было
+        writer.writerow(row)          
 
 
     df = pd.read_csv(CSV_PATH, header=None)
