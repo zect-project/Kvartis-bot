@@ -7,14 +7,13 @@ from pathlib import Path
 import pandas as pd
 import numpy as np
 import joblib
-import csv
 
 # ===  НАСТРОЙКА ПУТЕЙ  ===
-BASE_DIR = Path(__file__).resolve().parent.parent  # корень проекта (Kvartis-bot)
+BASE_DIR = Path(__file__).resolve().parent.parent  # корень проекта 
 
 MODEL_PATH = BASE_DIR / "models" / "kvartis_model.cbm"
 SCALER_PATH = BASE_DIR / "models" / "kvartis_scaler.pkl"
-CSV_PATH = BASE_DIR / "web" / "wdata.csv"
+
 
 # ===  ЗАГРУЗКА МОДЕЛИ  ===
 model = CatBoostRegressor()
@@ -48,25 +47,26 @@ async def predict(
     floor: int = Form(...),
     all_floor: int = Form(...)
 ):
-    # ===  Перезаписываем wdata.csv  ===
-    row = [city, rooms, m2, repair, floor, all_floor]
-    with open(CSV_PATH, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.writer(f)
-        writer.writerow(row)          
 
+    data = {
+        'city': [city],
+        'rooms': [rooms],
+        'm2': [m2],
+        'repair': [repair],
+        'floor': [floor],
+        'all_floor': [all_floor]
+    }
+    x = pd.DataFrame(data)
 
-    df = pd.read_csv(CSV_PATH, header=None)
-    df.columns = ['city', 'rooms', 'm2', 'repair', 'floor', 'all_floor']
-    row = df.iloc[0]
-    x = pd.DataFrame([row])
-
+    # ===  Масштабирование числовых признаков  ===
     numeric = ['rooms', 'm2', 'floor', 'all_floor']
     x[numeric] = scaler.transform(x[numeric])
 
+    # ===  Предсказание  ===
     pred_log = model.predict(x)
     pred_price = np.expm1(pred_log)[0]
 
-# консоль
+    # Вывод в консоль
     print(x.to_string(index=False))
     print("цена ≈", f"{pred_price:,.0f}", "₽")
 
@@ -88,6 +88,4 @@ async def predict(
             "result": result,
             "inputs": inputs
         }
-
     )
-
