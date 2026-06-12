@@ -2,6 +2,9 @@
  
 ### [English](https://github.com/zect-project/Kvartis-bot/blob/main/README_ENGLISH.md) | [Русский]([https://github.com/zect-project/Kvartis-bot/blob/main/README.md])
 
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
+
 **ИИ-бот для точной оценки рыночной стоимости квартир**  
 Модель на **CatBoostRegressor**, обученная на реальных данных о недвижимости.  
 Быстро и точно предсказывает цену по ключевым параметрам: город, количество комнат, площадь, ремонт, этаж и этажность дома.
