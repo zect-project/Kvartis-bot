@@ -43,16 +43,17 @@ cd Kvartis-bot
 ### Зависимости
 pip install fastapi uvicorn catboost pandas numpy joblib scikit-learn jinja2
 
-## Запуск веб-приложения
+## Запуск через Uvicorn
 ```
 uvicorn main:app --reload
 ```
-## Запуск Docker
+## Запуск через Docker
 ```
 docker compose down
 docker compose up --build
 ```
 #### Открой http://localhost:8000
+
 
 ## Веб интерфейс
 ![](https://github.com/zect-project/Kvartis-bot/blob/main/image/interface_1.png)
