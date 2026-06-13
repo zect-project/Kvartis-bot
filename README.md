@@ -52,7 +52,7 @@ uvicorn main:app --reload
 docker compose down
 docker compose up --build
 ```
-Открой http://localhost:8000
+#### Открой http://localhost:8000
 
 ## Веб интерфейс
 ![](https://github.com/zect-project/Kvartis-bot/blob/main/image/interface_1.png)
