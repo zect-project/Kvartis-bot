@@ -48,6 +48,13 @@ uvicorn main:app --reload
 
 Открой в браузере: http://127.0.0.1:8000
 
+## Запуск Docker
+```
+docker compose down
+docker compose up --build
+```
+Открой http://localhost:8000
+
 ## Веб интерфейс
 ![](https://github.com/zect-project/Kvartis-bot/blob/main/image/interface_1.png)
 ![](https://github.com/zect-project/Kvartis-bot/blob/main/image/interface_2.png)
