@@ -31,17 +31,25 @@ Quickly and accurately predicts apartment prices based on key parameters: city, 
 
 ## Installation and Launch
 
-### 1. Clone the repository
+### Clone the repository
 ```bash
 git clone https://github.com/zect-project/Kvartis-bot.git
 cd Kvartis-bot
 ```
-### 2. Install dependencies
+### Install dependencies
+```
 pip install fastapi uvicorn catboost pandas numpy joblib scikit-learn jinja2
-### 3. Run the web application
+```
+### Run with Uvicorn
+```
 uvicorn main:app --reload
-
-Open in your browser: http://127.0.0.1:8000
+```
+### Run with Docker
+```
+docker compose down
+docker compose up --build
+```
+#### Open in your browser: http://localhost:8000
 
 ## Web interface
 ![](https://github.com/zect-project/Kvartis-bot/blob/main/image/interface_1.png)
