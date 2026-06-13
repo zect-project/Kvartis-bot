@@ -1,0 +1,11 @@
+version: "3.9"
+
+services:
+  kvartis-bot:
+    build: .
+    container_name: kvartis-bot
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    
+    # volumes
