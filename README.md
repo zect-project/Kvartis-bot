@@ -41,7 +41,7 @@ git clone https://github.com/zect-project/Kvartis-bot.git
 cd Kvartis-bot
 ```
 ### Зависимости
-pip install fastapi uvicorn catboost pandas numpy joblib scikit-learn jinja2
+pip install -r requirements.txt
 
 ## Запуск через Uvicorn
 ```
