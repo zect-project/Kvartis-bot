@@ -44,7 +44,7 @@ cd Kvartis-bot
 ```
 pip install -r requirements.txt
 ```
-### 3. Запуск через Uvicorn
+### Запуск через Uvicorn
 ```
 uvicorn main:app --reload
 ```
