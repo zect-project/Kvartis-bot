@@ -32,23 +32,24 @@
 ---
 
 
-##  Установка и запуск
+## Установка и запуск
 
 
-### Клонирование
+### 1. Клонирование
 ```bash
 git clone https://github.com/zect-project/Kvartis-bot.git
 cd Kvartis-bot
 ```
-### Зависимости
+### 2. Зависимости
 ```
 pip install -r requirements.txt
 ```
-## Запуск через Uvicorn
+### 3. Запуск через Uvicorn
 ```
 uvicorn main:app --reload
 ```
-## Запуск через Docker
+**или**
+### Запуск через Docker
 ```
 docker compose down
 docker compose up --build
